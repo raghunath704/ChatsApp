@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
+import com.raghunath704.chats.Adapters.FragmentsAdapter;
 import com.raghunath704.chats.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         binding=ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         auth= FirebaseAuth.getInstance();
+        binding.viewPager.setAdapter(new FragmentsAdapter(getSupportFragmentManager()));
+        binding.tabLayout.setupWithViewPager(binding.viewPager);
     }
 
     @Override
