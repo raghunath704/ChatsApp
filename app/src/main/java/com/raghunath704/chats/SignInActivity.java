@@ -22,6 +22,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.FirebaseDatabase;
+import com.raghunath704.chats.Models.Users;
 import com.raghunath704.chats.databinding.ActivitySignInBinding;
 import com.raghunath704.chats.databinding.ActivitySignUpBinding;
 
@@ -30,6 +32,7 @@ public class SignInActivity extends AppCompatActivity {
     ProgressDialog progressDialog1,progressDialog2;
     FirebaseAuth auth;
     GoogleSignInClient mGoogleSignInClient;
+    FirebaseDatabase database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +41,7 @@ public class SignInActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         auth=FirebaseAuth.getInstance();
+        database=FirebaseDatabase.getInstance();
         progressDialog1=new ProgressDialog(SignInActivity.this);
         progressDialog1.setTitle("LogIn");
         progressDialog1.setMessage("LogIn  to your Account");
@@ -133,6 +137,14 @@ public class SignInActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = auth.getCurrentUser();
+
+                            // Storing googles user information in firebase
+                            Users users=new Users();
+                            users.setUserId(user.getUid());
+                            users.setUserName(user.getDisplayName());
+                            users.setProfilePic(user.getPhotoUrl().toString());
+
+                            database.getReference().child("Users").child(user.getUid()).setValue(users);
                             Intent intent=new Intent(SignInActivity.this,MainActivity.class);
                             startActivity(intent);
                             Toast.makeText(SignInActivity.this, "Logged In Successfully 😎", Toast.LENGTH_SHORT).show();
