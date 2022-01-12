@@ -57,6 +57,8 @@ public class SignUpActivity extends AppCompatActivity {
                             String id=task.getResult().getUser().getUid();
                             //creating instance of users in database
                             database.getReference().child("Users").child(id).setValue(user);
+                            Intent intent=new Intent(SignUpActivity.this,MainActivity.class);
+                            startActivity(intent);
                             Toast.makeText(SignUpActivity.this, "User Created Successfully 😎", Toast.LENGTH_SHORT).show();
                         }
                         else{
