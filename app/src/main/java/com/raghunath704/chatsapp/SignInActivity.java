@@ -1,4 +1,4 @@
-package com.raghunath704.chats;
+package com.raghunath704.chatsapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,9 +23,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.FirebaseDatabase;
-import com.raghunath704.chats.Models.Users;
-import com.raghunath704.chats.databinding.ActivitySignInBinding;
-import com.raghunath704.chats.databinding.ActivitySignUpBinding;
+import com.raghunath704.chatsapp.Models.Users;
+import com.raghunath704.chatsapp.databinding.ActivitySignInBinding;
+import com.raghunath704.chatsapp.databinding.ActivitySignUpBinding;
 
 public class SignInActivity extends AppCompatActivity {
     ActivitySignInBinding binding;

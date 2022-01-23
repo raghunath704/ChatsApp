@@ -1,4 +1,4 @@
-package com.raghunath704.chats;
+package com.raghunath704.chatsapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,9 +11,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.FirebaseDatabase;
-import com.raghunath704.chats.Adapters.FragmentsAdapter;
-import com.raghunath704.chats.databinding.ActivityMainBinding;
+import com.raghunath704.chatsapp.Adapters.FragmentsAdapter;
+import com.raghunath704.chatsapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.raghunath704.chats">
+    package="com.raghunath704.chatsapp">
 
     <application
         android:allowBackup="true"
@@ -10,22 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chats">
         <activity
-            android:name=".SplashScreen"
+            android:name="com.raghunath704.chatsapp.SplashScreen"
             android:exported="true" >
 
         </activity>
         <activity
-            android:name=".SignInActivity"
+            android:name="com.raghunath704.chatsapp.SignInActivity"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".SignUpActivity"
+            android:name="com.raghunath704.chatsapp.SignUpActivity"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.raghunath704.chatsapp.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

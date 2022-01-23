@@ -1,4 +1,4 @@
-package com.raghunath704.chats.Adapters;
+package com.raghunath704.chatsapp.Adapters;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -6,9 +6,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.raghunath704.chats.Fragmens.CallsFragment;
-import com.raghunath704.chats.Fragmens.ChatsFragment;
-import com.raghunath704.chats.Fragmens.StatusFragment;
+import com.raghunath704.chatsapp.Fragmens.CallsFragment;
+import com.raghunath704.chatsapp.Fragmens.ChatsFragment;
+import com.raghunath704.chatsapp.Fragmens.StatusFragment;
 
 public class FragmentsAdapter extends FragmentPagerAdapter {
     public FragmentsAdapter(@NonNull FragmentManager fm) {

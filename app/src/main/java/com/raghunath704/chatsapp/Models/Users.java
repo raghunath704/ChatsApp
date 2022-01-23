@@ -1,4 +1,4 @@
-package com.raghunath704.chats.Models;
+package com.raghunath704.chatsapp.Models;
 
 public class Users {
 

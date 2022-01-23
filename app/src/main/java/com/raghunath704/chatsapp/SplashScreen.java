@@ -1,4 +1,4 @@
-package com.raghunath704.chats;
+package com.raghunath704.chatsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -1,4 +1,4 @@
-package com.raghunath704.chats.Adapters;
+package com.raghunath704.chatsapp.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,8 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.raghunath704.chats.Models.Users;
-import com.raghunath704.chats.R;
+import com.raghunath704.chatsapp.Models.Users;
+import com.raghunath704.chatsapp.R;
 
 import java.util.ArrayList;
 
